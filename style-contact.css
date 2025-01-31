@@ -145,3 +145,20 @@
     font-size: 2.9em;
     text-align: center;
 }
+
+
+@media screen and (max-width: 1400px) {
+
+    .Name {
+        font-size: 1.5em;
+    }
+
+    .Email {
+        font-size: 1.5em;
+    }
+
+    .Input {
+        font-size: 1.5em;
+    }
+
+}
