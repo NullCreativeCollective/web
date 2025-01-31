@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 53">
+  <defs>
+    <style>
+      .d {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="b" data-name="Layer 1">
+    <path id="c" data-name="linkedin" class="d" d="M44.8,53v-22s-1.2-4.6-5.6-4.4c-4.4.2-5.8.9-7.8,3.3v23.1h-11.3V18.1h11.2v5.1s3.6-7.1,11.2-6.6c6.9.5,12.1,4.7,13.2,13.9h.3v22.5h-11.2ZM6.7,13.6c-3.7,0-6.7-3-6.7-6.8S3,0,6.7,0s6.7,3,6.7,6.8-3,6.8-6.7,6.8ZM12.3,53H1.1V18.1h11.2v34.9Z"/>
+  </g>
+</svg>

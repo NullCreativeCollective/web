@@ -1,0 +1,11 @@
+.bottom-sent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bottom-sent a{
+    font-size: 2.9em;
+    text-align: left;
+    margin-left: 3%;
+}
