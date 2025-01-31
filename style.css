@@ -137,3 +137,30 @@ hr {
     width: 96%;
 }
 
+@media screen and (max-width: 1400px) {
+
+    .container a{
+        font-size: 8.5em;
+    }
+    
+    .button a{
+        font-size: 2em;
+    }
+
+    #subtext{
+        font-size: 2em;
+    }
+
+    #subtext1{
+        font-size: 2em;
+    }
+
+    .subtext-div{
+        font-size: .7em;
+    }
+
+}
+
+
+
+
