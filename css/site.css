@@ -1,0 +1,25 @@
+/* null_ — global styles. Layout and component styles are inline in the page templates. */
+html,body{margin:0;background:#0b0b0b}
+html{scroll-behavior:smooth}
+body{color:#f2f2ef;font-family:"helvetica-neue-lt-pro","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+body.page-home a:hover{text-decoration:underline;text-underline-offset:4px}
+body.page-case a:hover{color:#ffffff}
+::selection{background:#f2f2ef;color:#0b0b0b}
+html[data-ret]::after{content:"";position:fixed;inset:0;background:#0b0b0b;z-index:2147483000}
+@keyframes elkoGrad{0%{background-position:0 0}50%{background-position:-300% 0}100%{background-position:0 0}}
+/* loading screen */
+#loader{position:fixed;inset:0;z-index:2147483100;background:#0b0b0b;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .6s cubic-bezier(.65,0,.35,1)}
+#loader img{width:clamp(96px,12vw,150px);height:auto;display:block}
+#loader i{display:block;width:clamp(96px,12vw,150px);height:1px;background:#2a2a2a;overflow:hidden;position:relative}
+#loader i::after{content:"";position:absolute;inset:0;background:#f2f2ef;transform-origin:0 50%;animation:ld 1.4s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes ld{0%{transform:scaleX(0)}60%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+#loader.out{opacity:0;pointer-events:none}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+noscript{display:block;max-width:760px;margin:0 auto;padding:96px 24px;line-height:1.5}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  #loader,#loader i::after{transition:none;animation:none}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0b0b">
+<title>Case study — null_</title>
+<meta name="description" content="null_ is a Prague-based creative studio working at the intersection of sound, sight and space: projection mapping, live audio-reactive visuals, brand identity, event coverage and album rollouts across Europe and the Middle East.">
+<link rel="canonical" href="https://nullcc.com/case-study.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="null_">
+<meta property="og:title" content="Case study — null_">
+<meta property="og:description" content="null_ is a Prague-based creative studio working at the intersection of sound, sight and space: projection mapping, live audio-reactive visuals, brand identity, event coverage and album rollouts across Europe and the Middle East.">
+<meta property="og:url" content="https://nullcc.com/case-study.html">
+<meta property="og:image" content="https://nullcc.com/media/vj-thumbs/seera-balad-beast.jpg">
+<meta property="og:image:width" content="1032"><meta property="og:image:height" content="645">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Case study — null_">
+<meta name="twitter:description" content="null_ is a Prague-based creative studio working at the intersection of sound, sight and space: projection mapping, live audio-reactive visuals, brand identity, event coverage and album rollouts across Europe and the Middle East.">
+<meta name="twitter:image" content="https://nullcc.com/media/vj-thumbs/seera-balad-beast.jpg">
+<link rel="icon" href="media/null-logo.svg" type="image/svg+xml">
+<script type="importmap">{"imports":{"three":"./js/vendor/three/build/three.module.min.js"}}</script>
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<link rel="stylesheet" href="https://use.typekit.net/fsq6hvs.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/site.css">
+<script defer src="js/vendor/react.production.min.js"></script>
+<script defer src="js/vendor/react-dom.production.min.js"></script>
+<script defer src="js/view.js"></script>
+<script defer src="data/projects.js"></script>
+<script defer src="js/video-gate.js"></script>
+<script defer src="js/null-stage.js"></script>
+<script defer src="js/seo.js"></script>
+<script defer src="js/case-study.js"></script>
+</head>
+<body class="page-case">
+<div id="loader" aria-hidden="true"><img src="media/null-logo.svg" alt="" width="150" height="56"><i></i></div>
+<div id="root"></div>
+<noscript><p>This case study needs JavaScript. <a href="index.html">Back to null_</a></p></noscript>
+<script type="text/html" id="view">
+<header style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px clamp(16px,4vw,48px);mix-blend-mode:difference;color:#ffffff;">
+  <a href="index.html" onClick="{{ close }}" aria-label="null_ home" style="display:block;"><svg viewBox="0 0 72.9 27.45" fill="currentColor" role="img" aria-label="null_" style="display:block;height:16px;width:auto;"><path d="M18.29,14.78v12.14h-5.35v-11.05c0-1.630-.26-2.84-.79-3.6-.53-.77-1.41-1.15-2.64-1.15-1.08,0-1.92.23-2.53.68-.6.45-1.02,1.09-1.26,1.9-.24.82-.36,1.84-.36,3.07v10.14H0V7.43h5.09v2.72h.11c.63-1.03,1.47-1.83,2.53-2.39,1.06-.57,2.21-.85,3.47-.85,2.46,0,4.26.63,5.39,1.89,1.13,1.26,1.7,3.26,1.7,5.99"></path><path d="M26.23,22.04c.52.79,1.4,1.19,2.66,1.19,1.46,0,2.51-.44,3.17-1.32.65-.88.98-2.29.98-4.22V7.43h5.35v19.49h-5.09v-2.71h-.11c-.65,1.06-1.51,1.86-2.56,2.41-1.06.55-2.2.83-3.43.83-1.68,0-3.05-.29-4.09-.87-1.04-.58-1.8-1.45-2.28-2.6-.48-1.16-.72-2.64-.72-4.45V7.43h5.35v11.05c0,1.58.26,2.77.77,3.56"></path><rect x="40.35" width="5.35" height="26.92"></rect><rect x="47.81" width="5.35" height="26.92"></rect><rect x="55.35" y="22.89" width="17.55" height="4.03"></rect></svg></a>
+  <nav style="display:flex;align-items:center;gap:clamp(14px,2vw,28px);font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;">
+    <a href="{{ prevHref }}" onClick="{{ goPrev }}" aria-label="Previous project" style="display:flex;padding:6px;">←</a>
+    <span>{{ counter }}</span>
+    <a href="{{ nextHref }}" onClick="{{ goNext }}" aria-label="Next project" style="display:flex;padding:6px;">→</a>
+    <a href="index.html#design" onClick="{{ close }}" aria-label="Close" style="display:flex;padding:6px;font-size:14px;">✕</a>
+  </nav>
+</header>
+
+<sc-if value="{{ hasStage }}" hint-placeholder-val="{{ false }}">
+  <section data-screen-label="Stage" style="padding:64px clamp(16px,2.2vw,40px) 0;">
+    <div style="position:relative;width:100%;height:min(80vh,max(380px,110vw));background:#0b0b0b;">
+      <x-import component-from-global-scope="null-stage" from="./null-stage.js?v=416" stage="{{ p.stage }}" style="display:block;width:100%;height:100%;" hint-size="100%,100%"></x-import>
+    </div>
+  </section>
+</sc-if>
+<sc-if value="{{ isDoc }}" hint-placeholder-val="{{ false }}">
+<main ref="{{ mainRef }}" data-screen-label="Documentation" style="opacity:0;display:flex;flex-direction:column;gap:clamp(40px,6vw,96px);padding:72px clamp(16px,2.2vw,40px) 0;">
+  <div style="position:relative;width:100%;aspect-ratio:16/9;max-height:calc(100vh - 120px);background:#141413;">
+    <sc-if value="{{ keyUrl }}" hint-placeholder-val="{{ false }}">
+      <iframe referrerPolicy="strict-origin-when-cross-origin" src="{{ keyUrl }}" title="{{ keyTitle }}" allow="accelerometer; gyroscope; autoplay; encrypted-media; fullscreen; picture-in-picture" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+    </sc-if>
+    <sc-if value="{{ keyNoUrl }}" hint-placeholder-val="{{ true }}">
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#6f6f6b;">{{ keyPh }}</div>
+    </sc-if>
+  </div>
+  <sc-if value="{{ hasSets }}" hint-placeholder-val="{{ false }}">
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,1.2vw,16px);margin-top:calc(-1 * clamp(24px,4vw,72px));">
+      <sc-for list="{{ thumbs }}" as="s" hint-placeholder-count="4">
+        <button type="button" onClick="{{ s.pick }}" aria-label="{{ s.label }}" style-hover="opacity:1;" style="position:relative;display:flex;flex-direction:column;gap:8px;padding:0;border:0;background:none;color:inherit;text-align:left;cursor:pointer;opacity:0.72;transition:opacity 0.3s cubic-bezier(0.65,0,0.35,1);">
+          <span style="position:relative;display:block;width:100%;aspect-ratio:16/9;background-color:#141413;background-image:{{ s.bg }};background-size:cover;background-position:center;">
+            <span aria-hidden="true" style="position:absolute;left:8px;bottom:8px;display:flex;align-items:center;gap:6px;padding:5px 8px;background:#0b0b0b;color:#f2f2ef;font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;line-height:1;"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"></path></svg>Play</span>
+          </span>
+          <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#8e8e89;">{{ s.title }}</span>
+        </button>
+      </sc-for>
+    </div>
+  </sc-if>
+  <div style="display:grid;grid-template-columns:{{ docCols }};column-gap:clamp(12px,2vw,28px);row-gap:clamp(28px,4vw,48px);align-items:start;">
+    <div style="grid-column:{{ docTitleCol }};display:flex;flex-direction:column;gap:14px;">
+      <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8e8e89;">{{ p.section }}</span>
+      <h1 style="margin:0;font-size:clamp(32px,4vw,64px);font-weight:700;letter-spacing:-0.045em;line-height:0.92;text-wrap:balance;">{{ p.title }}</h1>
+      <p style="margin:0;font-size:15px;line-height:1.5;color:#d6d6d1;max-width:48ch;text-wrap:pretty;">{{ p.about }}</p>
+    </div>
+    <dl style="margin:0;display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:16px;row-gap:18px;">
+      <sc-for list="{{ rows }}" as="r" hint-placeholder-count="5">
+        <dt style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8e8e89;padding-top:2px;">{{ r.label }}</dt>
+        <dd style="margin:0;display:flex;flex-direction:column;gap:2px;font-size:13.5px;font-weight:700;line-height:1.22;">
+          <sc-for list="{{ r.values }}" as="v" hint-placeholder-count="1"><span>{{ v }}</span></sc-for>
+        </dd>
+      </sc-for>
+    </dl>
+  </div>
+            <sc-if value="{{ s.noEmbed }}" hint-placeholder-val="{{ true }}">
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#6f6f6b;">Set recording — embed</div>
+            </sc-if>
+          </div>
+          <figcaption style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#8e8e89;">{{ s.title }}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </sc-if>
+  <div style="display:grid;grid-template-columns:{{ docCols }};gap:clamp(12px,2vw,28px);align-items:start;">
+    <sc-for list="{{ bonus }}" as="b" hint-placeholder-count="6">
+      <div style="position:relative;width:100%;aspect-ratio:{{ b.ratio }};"><image-slot id="{{ b.id }}" shape="rect" placeholder="{{ b.ph }}" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot></div>
+    </sc-for>
+  </div>
+  <a href="{{ nextHref }}" onClick="{{ goNext }}" style-hover="background-color:#f2f2ef;color:#0b0b0b;padding-left:clamp(16px,2vw,32px);padding-right:clamp(16px,2vw,32px);" style="margin-top:clamp(48px,8vw,120px);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;padding:28px 0 clamp(40px,6vw,72px);border-top:1px solid #2a2a2a;transition:background-color 0.45s cubic-bezier(0.65,0,0.35,1),color 0.45s cubic-bezier(0.65,0,0.35,1),padding 0.45s cubic-bezier(0.65,0,0.35,1);">
+    <span style="display:flex;flex-direction:column;gap:12px;">
+      <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;opacity:0.6;">Next project</span>
+      <span style="font-size:clamp(36px,6vw,96px);font-weight:700;letter-spacing:-0.05em;line-height:0.9;">{{ next.title }}</span>
+    </span>
+    <svg viewBox="0 0 500 500" fill="currentColor" aria-hidden="true" style="display:block;width:clamp(28px,3.4vw,56px);height:auto;flex:none;"><polygon points="77,0 405,328 405,32 500,127 500,500 127,500 32,405 328,405 0,77"></polygon></svg>
+  </a>
+
+</main>
+</sc-if>
+<sc-if value="{{ notDoc }}" hint-placeholder-val="{{ true }}">
+<main ref="{{ mainRef }}" data-screen-label="Case study" style="opacity:0;display:grid;grid-template-columns:{{ cols }};align-items:start;column-gap:clamp(28px,5vw,96px);padding:0 clamp(16px,2.2vw,40px);">
+  <aside ref="{{ asideRef }}" style="min-width:0;position:{{ asidePos }};top:{{ asideTop }};min-height:{{ asideH }};display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:96px 0 28px;">
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8e8e89;">{{ p.section }}</span>
+      <sc-if value="{{ p.logo }}" hint-placeholder-val="{{ false }}">
+        <h1 style="margin:0;"><div role="img" aria-label="{{ p.title }}" style="width:100%;max-width:{{ p.logoMax }};aspect-ratio:{{ p.logoAr }};background-image:{{ p.logoBg }};background-size:contain;background-repeat:no-repeat;background-position:left center;"></div></h1>
+      </sc-if>
+      <sc-if value="{{ p.logoVideo }}" hint-placeholder-val="{{ false }}">
+        <h1 aria-label="{{ p.title }}" style="margin:0;position:relative;width:100%;max-width:{{ p.logoMax }};aspect-ratio:{{ p.logoAr }};overflow:hidden;">
+          <video data-src="{{ p.logoVideo }}" aria-hidden="true" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" style="position:absolute;left:{{ p.lvLeft }};top:{{ p.lvTop }};width:{{ p.lvW }};height:auto;object-fit:cover;mix-blend-mode:lighten;"></video>
+        </h1>
+      </sc-if>
+      <sc-if value="{{ p.noLogo }}" hint-placeholder-val="{{ true }}">
+        <h1 style="margin:0;font-size:clamp(26px,2.2vw,40px);font-weight:700;letter-spacing:-0.035em;line-height:0.95;text-wrap:balance;">{{ p.title }}</h1>
+      </sc-if>
+    </div>
+    <dl style="margin:0;display:grid;grid-template-columns:88px minmax(0,1fr);column-gap:16px;row-gap:clamp(32px,4.5vh,52px);">
+      <dt style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#8e8e89;padding-top:3px;">About</dt>
+      <dd style="margin:0;font-size:13.5px;font-weight:700;line-height:1.22;letter-spacing:-0.01em;max-width:40ch;text-wrap:pretty;">{{ p.about }}</dd>
+      <dt style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#8e8e89;padding-top:3px;">Role</dt>
+      <dd style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:16px;">
+        <span style="display:flex;flex-direction:column;font-size:13.5px;font-weight:700;line-height:1.22;letter-spacing:-0.01em;">
+          <sc-for list="{{ p.services }}" as="v" hint-placeholder-count="2"><span>{{ v }}</span></sc-for>
+        </span>
+        <span style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start;">
+          <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#8e8e89;padding-top:3px;">Year</span><span style="font-size:13.5px;font-weight:700;line-height:1.22;letter-spacing:-0.01em;">{{ p.year }}</span>
+        </span>
+      </dd>
+      <dt style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#8e8e89;padding-top:3px;">Client</dt>
+      <dd style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:16px;">
+        <sc-if value="{{ p.clientLogo }}" hint-placeholder-val="{{ false }}"><span role="img" aria-label="{{ p.client }}" style="display:block;height:{{ p.clientLogoH }};width:{{ p.clientLogoW }};background-image:{{ p.clientLogoBg }};background-size:contain;background-repeat:no-repeat;background-position:left center;"></span></sc-if>
+        <sc-if value="{{ p.noClientLogo }}" hint-placeholder-val="{{ true }}"><span style="font-size:13.5px;font-weight:700;line-height:1.22;letter-spacing:-0.01em;">{{ p.client }}</span></sc-if>
+        <span style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start;">
+          <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#8e8e89;padding-top:3px;">Where</span><span style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;"><span style="font-size:13.5px;font-weight:700;line-height:1.22;letter-spacing:-0.01em;">{{ p.location }}</span><sc-if value="{{ p.whereLogo }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ p.whereLogoAlt }}" style="width:{{ p.whereLogoW }};max-width:100%;aspect-ratio:{{ p.whereLogoAr }};background-image:{{ p.whereLogoBg }};background-size:contain;background-repeat:no-repeat;background-position:left center;"></div></sc-if></span>
+        </span>
+      </dd>
+      <sc-if value="{{ p.hasFeatured }}" hint-placeholder-val="{{ false }}">
+        <dt style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#8e8e89;padding-top:3px;">Featured on</dt>
+        <dd style="margin:0;display:flex;flex-wrap:wrap;gap:14px 36px;align-items:center;">
+          <sc-for list="{{ p.featured }}" as="f" hint-placeholder-count="3">
+            <a href="{{ f.href }}" target="_blank" rel="noopener" aria-label="{{ f.name }}" style-hover="opacity:0.6;" style="display:block;transition:opacity 0.25s ease;">
+              <sc-if value="{{ f.logo }}" hint-placeholder-val="{{ false }}">
+                <div role="img" aria-label="{{ f.name }}" style="width:{{ f.w }};height:22px;background-image:{{ f.bg }};background-size:contain;background-repeat:no-repeat;background-position:left center;"></div>
+              </sc-if>
+              <sc-if value="{{ f.noLogo }}" hint-placeholder-val="{{ true }}">
+                <span style="display:flex;align-items:center;justify-content:center;width:96px;height:32px;border:1px dashed #3a3a38;font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#8e8e89;">{{ f.name }}</span>
+              </sc-if>
+            </a>
+          </sc-for>
+        </dd>
+      </sc-if>
+      <sc-if value="{{ p.link.href }}" hint-placeholder-val="{{ true }}">
+        <span></span>
+        <a href="{{ p.link.href }}" target="_blank" rel="noopener" style="justify-self:start;margin-top:8px;font-size:clamp(18px,1.4vw,24px);font-weight:700;letter-spacing:-0.02em;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;">{{ p.link.label }} →</a>
+      </sc-if>
+    </dl>
+    <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8e8e89;">Scroll ↓</span>
+  </aside>
+
+  <article style="min-width:0;width:100%;display:flex;flex-direction:column;gap:clamp(32px,4.6vw,96px);padding:96px 0 0;">
+    <sc-for list="{{ blocks }}" as="b" hint-placeholder-count="4">
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <sc-if value="{{ b.isFull }}" hint-placeholder-val="{{ true }}">
+          <div data-kv="{{ b.kv }}" style="position:relative;width:100%;max-width:{{ b.maxW }};margin:{{ b.fMargin }};aspect-ratio:{{ b.ratio }};">
+            <sc-if value="{{ b.img }}" hint-placeholder-val="{{ false }}">
+              <div role="img" aria-label="{{ b.alt }}" style="position:absolute;inset:0;background-color:{{ b.bgColFull }};background-position:center;background-size:{{ b.bgSize }};background-repeat:no-repeat;background-image:{{ b.bgImg }};mix-blend-mode:{{ b.imgBlend }};"></div>
+            </sc-if>
+            <sc-if value="{{ b.noImgNoStage }}" hint-placeholder-val="{{ true }}">
+              <image-slot id="{{ b.id }}" shape="rect" placeholder="{{ b.ph }}" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot>
+            </sc-if>
+            <sc-if value="{{ b.hasStage3d }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;inset:0;background:#0b0b0b;overflow:hidden;">
+                <x-import component-from-global-scope="null-stage" from="./null-stage.js?v=416" stage="{{ b.stage3d }}" style="display:block;width:100%;height:100%;" hint-size="100%,100%"></x-import>
+              </div>
+            </sc-if>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isMockup }}" hint-placeholder-val="{{ false }}">
+          <div style="position:relative;width:100%;max-width:{{ b.maxW }};aspect-ratio:{{ b.ratio }};background:#141413;"><sc-if value="{{ b.img }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ b.alt }}" style="position:absolute;inset:0;background-color:{{ b.bgCol }};background-position:{{ b.bgPos }};background-size:{{ b.bgSize }};background-repeat:no-repeat;background-image:{{ b.bgImg }};"></div></sc-if><sc-if value="{{ b.noImg }}" hint-placeholder-val="{{ true }}"><image-slot id="{{ b.id }}" shape="rect" placeholder="{{ b.ph }}" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot></sc-if></div>
+        </sc-if>
+        <sc-if value="{{ b.isMixRow }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.6vw,24px);margin-top:{{ b.mt }};">
+            <sc-for list="{{ b.mix }}" as="m" hint-placeholder-count="4">
+              <div role="img" aria-label="{{ m.alt }}" data-wig="{{ m.wig }}" style="flex:{{ m.flex }};min-width:0;aspect-ratio:{{ m.ratio }};background-color:#141413;background-image:{{ m.bg }};background-size:cover;background-position:center;"></div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isVideoRow }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(16px,2vw,28px);margin-top:{{ b.mt }};">
+            <sc-for list="{{ b.vids }}" as="v" hint-placeholder-count="2">
+              <div style="position:relative;width:100%;aspect-ratio:{{ v.ratio }};overflow:hidden;">
+                <video data-src="{{ v.src }}" aria-label="{{ v.alt }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:lighten;"></video>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isPixels }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:{{ pixCols }};gap:clamp(20px,2.4vw,36px) clamp(12px,1.6vw,24px);">
+            <sc-for list="{{ b.panels }}" as="pn" hint-placeholder-count="4">
+              <div style="display:flex;flex-direction:column;gap:10px;min-width:0;">
+                <div role="img" aria-label="{{ pn.name }}" style="display:grid;grid-template-columns:repeat(20,minmax(0,1fr));grid-template-rows:repeat(12,minmax(0,1fr));aspect-ratio:20/12;background:transparent;outline:1px solid #2a2a2a;">
+                  <sc-for list="{{ pn.cells }}" as="px" hint-placeholder-count="0"><span style="display:block;background:{{ px.c }};"></span></sc-for>
+                </div>
+                <div style="display:flex;align-items:baseline;gap:10px;">
+                  <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;color:#8e8e89;">{{ pn.n }}</span>
+                  <span style="font-size:clamp(18px,1.8vw,24px);font-weight:900;letter-spacing:-0.02em;line-height:1;text-transform:uppercase;">{{ pn.name }}</span>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isPalette }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:clamp(16px,2vw,28px);">
+            <div style="display:grid;grid-template-columns:{{ palCols }};row-gap:clamp(16px,2vw,28px);">
+              <sc-for list="{{ b.cells }}" as="cl" hint-placeholder-count="6">
+                <div onMouseEnter="{{ cl.enter }}" onMouseLeave="{{ cl.leave }}" onClick="{{ cl.tap }}" style="position:relative;display:flex;flex-direction:{{ cl.dir }};aspect-ratio:213/717;min-width:0;container-type:inline-size;cursor:default;overflow:hidden;contain:paint;">
+                  <div role="img" aria-label="{{ cl.alt }}" style="position:relative;flex:0 0 {{ cl.photoH }};background-color:#141413;background-image:{{ cl.bg }};background-size:cover;background-position:center;transition:flex-basis 0.6s cubic-bezier(0.65,0,0.35,1);"></div>
+                  <div style="position:relative;z-index:1;flex:1 1 auto;display:flex;flex-direction:column;justify-content:{{ cl.jc }};gap:2px;padding:6cqw;overflow:hidden;background:{{ cl.color }};color:{{ cl.ink }};cursor:default;">
+                    <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:clamp(6px,5.5cqw,11px);letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap;">{{ cl.n }} {{ cl.label }}</span>
+                    <span style="font-size:clamp(8px,12.5cqw,28px);font-weight:900;letter-spacing:-0.02em;line-height:1;text-transform:uppercase;white-space:nowrap;">{{ cl.name }}</span>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+            <p style="margin:0;font-size:15px;line-height:1.5;color:#d6d6d1;text-wrap:pretty;">{{ b.body }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isStackVideo }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:{{ stackCols }};gap:clamp(16px,2vw,28px);align-items:stretch;">
+            <div style="display:flex;flex-direction:column;gap:clamp(16px,2vw,28px);min-width:0;">
+              <div role="img" aria-label="{{ b.altA }}" style="width:100%;aspect-ratio:3/2;background-color:#1a1a19;background-position:center;background-size:cover;background-repeat:no-repeat;background-image:{{ b.bgA }};"></div>
+              <div role="img" aria-label="{{ b.altB }}" style="width:100%;aspect-ratio:3/2;background-color:#1a1a19;background-position:center;background-size:cover;background-repeat:no-repeat;background-image:{{ b.bgB }};"></div>
+            </div>
+            <div style="position:relative;min-width:0;min-height:{{ stackVidMin }};background:#141413;overflow:hidden;">
+              <video ref="{{ stackVidRef }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" aria-label="{{ b.altV }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isPair }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(16px,2vw,28px);margin-top:{{ b.mt }};">
+            <div style="position:relative;width:100%;aspect-ratio:{{ b.ratio }};"><sc-if value="{{ b.imgA }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ b.altA }}" style="position:absolute;inset:0;background-color:#141413;background-position:center;background-size:cover;background-repeat:no-repeat;background-image:{{ b.bgA }};"></div></sc-if><sc-if value="{{ b.noImgA }}" hint-placeholder-val="{{ true }}"><image-slot id="{{ b.idA }}" shape="rect" placeholder="{{ b.phA }}" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot></sc-if></div>
+            <div style="position:relative;width:100%;aspect-ratio:{{ b.ratio }};"><sc-if value="{{ b.imgB }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ b.altB }}" style="position:absolute;inset:0;background-color:#141413;background-position:center;background-size:cover;background-repeat:no-repeat;background-image:{{ b.bgB }};"></div></sc-if><sc-if value="{{ b.noImgB }}" hint-placeholder-val="{{ true }}"><image-slot id="{{ b.idB }}" shape="rect" placeholder="{{ b.phB }}" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot></sc-if></div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isMarkVideo }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:clamp(16px,2vw,28px);">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(16px,2.4vw,36px);align-items:end;">
+              <div style="position:relative;width:{{ b.imgW }};aspect-ratio:{{ b.ratio }};"><div role="img" aria-label="{{ b.alt }}" style="position:absolute;inset:0;background-color:transparent;background-position:{{ b.bgPos }};background-size:contain;background-repeat:no-repeat;background-image:{{ b.bgImg }};"></div></div>
+              <div style="position:relative;width:100%;aspect-ratio:{{ b.cropRatio }};overflow:hidden;background:#0b0b0b;">
+                <video data-src="{{ b.vsrc }}" aria-label="{{ b.valt }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" style="position:absolute;left:{{ b.vL }};top:{{ b.vT }};width:{{ b.vW }};height:{{ b.vH }};max-width:none;"></video>
+              </div>
+            </div>
+            <p style="margin:0;font-size:15px;line-height:1.5;color:#d6d6d1;max-width:40ch;text-wrap:pretty;">{{ b.body }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isMarkText }}" hint-placeholder-val="{{ false }}">
+          <div data-marktext="{{ b.ratio }}" style="display:flex;flex-wrap:nowrap;align-items:flex-end;gap:clamp(14px,1.6vw,24px);">
+            <div data-mark="1" role="img" aria-label="{{ b.alt }}" style="flex:none;width:96px;height:72px;background-position:left bottom;background-size:100% 100%;background-repeat:no-repeat;background-image:{{ b.bgImg }};"></div>
+            <p style="margin:0;flex:0 1 40ch;min-width:min(28ch,55%);font-size:15px;line-height:1.5;color:#d6d6d1;text-wrap:pretty;">{{ b.body }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isImageText }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(16px,2.4vw,36px);align-items:end;">
+            <div style="position:relative;width:{{ b.imgW }};aspect-ratio:{{ b.ratio }};"><sc-if value="{{ b.img }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ b.alt }}" style="position:absolute;inset:0;background-color:{{ b.bgCol }};background-position:{{ b.bgPos }};background-size:{{ b.bgSize }};background-repeat:no-repeat;background-image:{{ b.bgImg }};"></div></sc-if><sc-if value="{{ b.noImg }}" hint-placeholder-val="{{ true }}"><image-slot id="{{ b.id }}" shape="rect" placeholder="{{ b.ph }}" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot></sc-if></div>
+            <p style="margin:0;font-size:15px;line-height:1.5;color:#d6d6d1;max-width:40ch;text-wrap:pretty;">{{ b.body }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isCards }}" hint-placeholder-val="{{ false }}">
+          <div data-cards="{{ b.id }}" role="group" aria-label="{{ b.alt }}" style="position:relative;width:100%;height:{{ b.cardsH }};perspective:2000px;perspective-origin:50% 50%;overflow:visible;touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none;">
+            <sc-for list="{{ b.cards }}" as="cd" hint-placeholder-count="4">
+              <div data-card="{{ cd.i }}" style="position:absolute;left:0;top:0;width:28%;height:100%;transform-origin:50% 50%;background:#0b0b0b;isolation:isolate;box-shadow:0 22px 60px rgba(0,0,0,0.9),0 6px 18px rgba(0,0,0,0.7);transition:transform 0.75s cubic-bezier(0.65,0,0.35,1);will-change:transform;cursor:pointer;">
+                <video data-src="{{ cd.src }}" aria-label="{{ cd.alt }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" style="display:block;width:100%;height:100%;object-fit:cover;pointer-events:none;mix-blend-mode:lighten;transition:filter 0.75s cubic-bezier(0.65,0,0.35,1);"></video>
+              </div>
+            </sc-for>
+          </div>
+          <span style="position:relative;z-index:5;display:block;margin-top:12px;font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8e8e89;pointer-events:none;">{{ b.hint }}</span>
+        </sc-if>
+        <sc-if value="{{ b.isRule }}" hint-placeholder-val="{{ false }}">
+          <div aria-hidden="true" style="width:100%;height:1px;background:#2a2a2a;"></div>
+        </sc-if>
+        <sc-if value="{{ b.isSeq }}" hint-placeholder-val="{{ false }}">
+          <div data-seq="{{ b.id }}" style="position:relative;width:100%;max-width:{{ b.maxW }};margin:0 auto;aspect-ratio:{{ b.ratio }};overflow:hidden;border-radius:{{ b.radius }};border:{{ b.border }};box-sizing:border-box;">
+            <sc-for list="{{ b.seq }}" as="sv" hint-placeholder-count="2">
+              <video data-seq-src="{{ sv.src }}" aria-label="{{ b.alt }}" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ sv.op }};mix-blend-mode:{{ b.seqBlend }};"></video>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isVideo }}" hint-placeholder-val="{{ false }}">
+          <div data-kvv="{{ b.kv }}" style="position:relative;width:100%;aspect-ratio:{{ b.ratio }};background:{{ b.vBg }};">
+            <sc-if value="{{ b.src }}" hint-placeholder-val="{{ false }}">
+              <video data-src="{{ b.src }}" data-list="{{ b.listStr }}" aria-label="{{ b.alt }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:{{ b.blendMode }};"></video>
+            </sc-if>
+            <sc-if value="{{ b.noSrc }}" hint-placeholder-val="{{ true }}">
+              <image-slot id="{{ b.id }}" shape="rect" placeholder="{{ b.ph }}" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot>
+            </sc-if>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isTrophy }}" hint-placeholder-val="{{ false }}">
+          <div data-trophy="1" style="position:relative;">
+            <div style="height:calc(100vh - 72px);min-height:420px;display:grid;place-items:center;">
+              <canvas data-trophy-canvas="1" width="520" height="694" aria-hidden="true" style="grid-area:1/1;display:block;height:min(78vh,900px);width:auto;max-width:100%;"></canvas>
+              <p style="grid-area:1/1;margin:0;position:relative;z-index:1;text-align:center;font-size:clamp(28px,3.2vw,56px);font-weight:700;letter-spacing:-0.035em;line-height:1;color:#f2f2ef;">{{ b.text }}</p>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isCta }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:{{ textCols }};align-items:center;gap:20px clamp(16px,2vw,28px);padding:clamp(24px,4vw,56px) 0;">
+            <div style="isolation:isolate;display:flex;">
+              <a href="{{ b.href }}" target="_blank" rel="noopener" style-hover="padding-left:58px;padding-right:58px;" style="position:relative;display:inline-flex;align-items:center;justify-content:center;padding:14px 40px;border-radius:50px;background:#000;color:#fff;font-family:'Roboto Flex','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:300;font-size:20px;line-height:1.2;text-decoration:none;transition:padding 0.8s ease-in-out;">
+                <span aria-hidden="true" style="position:absolute;inset:-2px;z-index:-1;border-radius:50px;background:linear-gradient(45deg,#333333,#333333,#e3e3e3,#ffbfbf,#333333,#e3e3e3,#333333,#333333,#e3e3e3,#ffbfbf,#333333,#e3e3e3,#333333,#333333);background-size:400%;animation:elkoGrad 100s linear infinite;"></span>
+                <span aria-hidden="true" style="position:absolute;inset:-2px;z-index:-1;border-radius:50px;filter:blur(10px);background:linear-gradient(45deg,#333333,#333333,#e3e3e3,#ffbfbf,#333333,#e3e3e3,#333333,#333333,#e3e3e3,#ffbfbf,#333333,#e3e3e3,#333333,#333333);background-size:400%;animation:elkoGrad 100s linear infinite;"></span>
+                {{ b.label }}
+              </a>
+            </div>
+            <p style="margin:0;font-size:clamp(15px,1.2vw,17px);line-height:1.4;color:#d6d6d1;max-width:52ch;text-wrap:pretty;">{{ b.body }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isText }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:{{ textCols }};gap:12px clamp(16px,2vw,28px);padding:{{ b.tPad }};border-top:1px solid {{ b.tLine }};">
+            <div style="display:flex;flex-direction:column;gap:clamp(16px,2vw,28px);min-width:0;">
+              <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8e8e89;">{{ b.label }}</span>
+              <sc-if value="{{ b.tLogo }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ b.tLogoAlt }}" style="width:clamp(120px,11vw,200px);aspect-ratio:{{ b.tLogoAr }};background-image:{{ b.tLogoBg }};background-size:contain;background-repeat:no-repeat;background-position:left center;"></div></sc-if>
+            </div>
+            <p style="margin:0;font-size:clamp(17px,1.5vw,21px);line-height:1.4;color:#d6d6d1;max-width:52ch;text-wrap:pretty;white-space:pre-line;">{{ b.body }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isEmbed }}" hint-placeholder-val="{{ false }}">
+          <div style="position:relative;width:100%;aspect-ratio:16/9;background:#141413;">
+            <iframe loading="lazy" referrerPolicy="strict-origin-when-cross-origin" src="{{ b.embedUrl }}" title="{{ b.alt }}" allow="accelerometer; gyroscope; autoplay; encrypted-media; fullscreen; picture-in-picture" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isFlip }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:20px;padding:clamp(16px,3vw,48px) 0;">
+            <div onPointerMove="{{ b.tilt }}" onPointerLeave="{{ b.untilt }}" onClick="{{ b.flip }}" role="button" tabIndex="0" aria-label="{{ b.alt }}" style="width:min(100%,560px);aspect-ratio:1/1;perspective:1400px;cursor:pointer;">
+              <div data-tilt="1" style="position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 0.3s cubic-bezier(0.22,1,0.36,1);">
+                <div style="position:absolute;inset:0;transform-style:preserve-3d;transition:transform 0.8s cubic-bezier(0.65,0,0.35,1);transform:{{ b.flipT }};">
+                  <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background-color:#141413;background-position:center;background-size:cover;background-image:{{ b.bgFront }};box-shadow:0 28px 60px rgba(0,0,0,0.5);"></div>
+                  <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);background-color:#141413;background-position:center;background-size:cover;background-image:{{ b.bgBack }};box-shadow:0 28px 60px rgba(0,0,0,0.5);"></div>
+                </div>
+                <div style="position:absolute;inset:0;pointer-events:none;transform:translateZ(2px);mix-blend-mode:screen;opacity:var(--shine,0);transition:opacity 0.35s ease;background-image:linear-gradient(115deg,rgba(255,255,255,0) 38%,rgba(255,255,255,0.08) 45%,rgba(255,255,255,0.38) 50%,rgba(255,255,255,0.08) 55%,rgba(255,255,255,0) 62%);background-size:260% 260%;background-repeat:no-repeat;background-position:var(--mx,50%) var(--my,50%);"></div>
+              </div>
+            </div>
+            <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8e8e89;">{{ b.hint }}</span>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isDFlip }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:{{ b.dfCols }};gap:clamp(12px,1.6vw,24px);align-items:center;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:20px;padding:clamp(16px,3vw,48px) 0;min-width:0;">
+            <svg aria-hidden="true" width="0" height="0" style="position:absolute;width:0;height:0;">
+              <filter id="{{ b.fid }}" x="-20%" y="-20%" width="140%" height="140%" colorInterpolationFilters="sRGB">
+                <feTurbulence type="fractalNoise" baseFrequency="0.012 0.06" numOctaves="2" seed="7" result="n"></feTurbulence>
+                <feDisplacementMap data-dmap="1" in="SourceGraphic" in2="n" scale="0" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+              </filter>
+            </svg>
+            <div data-dflip="{{ b.fid }}" onClick="{{ b.dflip }}" role="button" tabIndex="0" aria-label="{{ b.alt }}" style="position:relative;width:min(100%,620px);aspect-ratio:1/1;perspective:1600px;cursor:pointer;">
+              <div data-dflip-in="1" style="position:absolute;inset:0;filter:{{ b.furl }};will-change:transform,filter;">
+                <div data-face="front" role="img" aria-label="{{ b.altFront }}" style="position:absolute;inset:0;background-position:center;background-size:contain;background-repeat:no-repeat;background-image:{{ b.bgFront }};"></div>
+                <div data-face="back" role="img" aria-label="{{ b.altBack }}" style="position:absolute;inset:0;opacity:0;background-position:center;background-size:contain;background-repeat:no-repeat;background-image:{{ b.bgBack }};"></div>
+              </div>
+            </div>
+            <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8e8e89;">{{ b.hint }}</span>
+          </div>
+          <sc-if value="{{ b.hasSide }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:clamp(12px,1.6vw,24px);min-width:0;">
+              <sc-for list="{{ b.sideItems }}" as="si" hint-placeholder-count="2">
+                <div role="img" aria-label="{{ si.alt }}" style="width:100%;aspect-ratio:{{ si.ratio }};background-color:#141413;background-position:center;background-size:cover;background-repeat:no-repeat;background-image:{{ si.bg }};"></div>
+              </sc-for>
+            </div>
+          </sc-if>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isPosterTitle }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:{{ posterCols }};gap:clamp(16px,2vw,28px);align-items:end;width:100%;max-width:100%;overflow:hidden;">
+            <div role="img" aria-label="{{ b.altP }}" style="width:100%;min-width:0;max-width:100%;aspect-ratio:1080/1350;background-color:#141413;background-position:center;background-size:cover;background-image:{{ b.bgPoster }};"></div>
+            <div role="img" aria-label="{{ b.altT }}" style="width:82%;aspect-ratio:641/421;background-position:left bottom;background-size:contain;background-repeat:no-repeat;background-image:{{ b.bgTitle }};"></div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isSeqRow }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(16px,2vw,28px);">
+            <div data-seq="{{ b.id }}" style="position:relative;width:100%;aspect-ratio:{{ b.ratio }};overflow:hidden;">
+              <sc-for list="{{ b.seq }}" as="sv" hint-placeholder-count="2">
+                <video data-seq-src="{{ sv.src }}" aria-label="{{ b.alt }}" muted="{{ true }}" playsInline="{{ true }}" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ sv.op }};mix-blend-mode:lighten;transform:scale({{ b.zoom }});transform-origin:center;"></video>
+              </sc-for>
+            </div>
+            <div style="position:relative;width:100%;aspect-ratio:{{ b.ratio }};overflow:hidden;">
+              <video data-src="{{ b.side }}" aria-label="{{ b.sideAlt }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:lighten;"></video>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isGrid }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:{{ b.gcols }};gap:clamp(12px,1.6vw,24px);align-items:{{ b.galign }};">
+            <sc-for list="{{ b.gitems }}" as="gi" hint-placeholder-count="2">
+              <div role="{{ gi.role }}" aria-label="{{ gi.alt }}" style="position:relative;width:100%;aspect-ratio:{{ gi.ratio }};background-color:{{ gi.bgc }};background-position:{{ gi.pos }};background-size:cover;background-repeat:no-repeat;background-image:{{ gi.bg }};mix-blend-mode:{{ gi.mb }};"><sc-if value="{{ gi.video }}" hint-placeholder-val="{{ false }}"><video data-src="{{ gi.video }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video></sc-if></div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isTrio }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:clamp(12px,1.6vw,24px);">
+            <div style="display:grid;grid-template-columns:{{ textCols }};gap:clamp(12px,1.6vw,24px);">
+              <div role="img" aria-label="{{ b.altA }}" style="width:100%;aspect-ratio:{{ b.ratioA }};background-color:#141413;background-position:center;background-size:cover;background-image:{{ b.bgA }};"></div>
+              <div role="img" aria-label="{{ b.altB }}" style="width:100%;aspect-ratio:{{ b.ratioA }};background-color:#141413;background-position:center;background-size:cover;background-image:{{ b.bgB }};"></div>
+            </div>
+            <div style="position:relative;width:100%;aspect-ratio:{{ b.vratio }};overflow:hidden;background:#141413;">
+              <video data-src="{{ b.vsrc }}" aria-label="{{ b.valt }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isBleedVideo }}" hint-placeholder-val="{{ false }}">
+          <div style="position:relative;width:100%;aspect-ratio:{{ b.cropRatio }};overflow:hidden;background:#0b0b0b;">
+            <video data-src="{{ b.vsrc }}" aria-label="{{ b.valt }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" style="position:absolute;left:{{ b.vL }};top:{{ b.vT }};width:{{ b.vW }};height:{{ b.vH }};max-width:none;"></video>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.cap }}" hint-placeholder-val="{{ false }}">
+          <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#8e8e89;">{{ b.cap }}</span>
+        </sc-if>
+      </div>
+    </sc-for>
+
+    <a href="{{ nextHref }}" onClick="{{ goNext }}" style-hover="background-color:#f2f2ef;color:#0b0b0b;padding-left:clamp(16px,2vw,32px);padding-right:clamp(16px,2vw,32px);" style="margin-top:clamp(48px,8vw,120px);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;padding:28px 0 clamp(40px,6vw,72px);border-top:1px solid #2a2a2a;transition:background-color 0.45s cubic-bezier(0.65,0,0.35,1),color 0.45s cubic-bezier(0.65,0,0.35,1),padding 0.45s cubic-bezier(0.65,0,0.35,1);">
+      <span style="display:flex;flex-direction:column;gap:12px;">
+        <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;opacity:0.6;">Next project</span>
+        <span style="font-size:clamp(36px,6vw,96px);font-weight:700;letter-spacing:-0.05em;line-height:0.9;">{{ next.title }}</span>
+      </span>
+      <svg viewBox="0 0 500 500" fill="currentColor" aria-hidden="true" style="display:block;width:clamp(28px,3.4vw,56px);height:auto;flex:none;"><polygon points="77,0 405,328 405,32 500,127 500,500 127,500 32,405 328,405 0,77"></polygon></svg>
+    </a>
+  </article>
+</main>
+</sc-if>
+</script>
+<script>(function(){var l=document.getElementById('loader');if(!l)return;
+if(window.parent!==window||document.documentElement.hasAttribute('data-ret')){l.remove();return;}
+var t0=Date.now(),gone=false;function done(){if(gone)return;gone=true;setTimeout(function(){l.classList.add('out');setTimeout(function(){l.remove();},700);},Math.max(0,450-(Date.now()-t0)));}
+var ready=[new Promise(function(r){if(document.readyState==='complete')r();else addEventListener('load',r);})];if(document.fonts&&document.fonts.ready)ready.push(document.fonts.ready);
+Promise.all(ready).then(function(){if(document.querySelector('null-stage')&&window.__nullStagesReady)Promise.race([window.__nullStagesReady,new Promise(function(r){setTimeout(r,10000);})]).then(done);else done();});setTimeout(done,13000);})();</script>
+</body>
+</html>
